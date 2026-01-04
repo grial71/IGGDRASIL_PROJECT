@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #f9f8f5;
+  color: #333;
+}
+
+header {
+  background-color: #002d26;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.logo {
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.hero {
+  background-color: #e6e1dc;
+  padding: 3rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #002d26;
+  color: white;
+}
