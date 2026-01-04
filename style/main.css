@@ -17,10 +17,39 @@ header {
   margin-bottom: 1rem;
 }
 
+/* HERO CON IMAGEN DE FONDO */
 .hero {
-  background-color: #e6e1dc;
-  padding: 3rem;
+  background-image: url("../img/costa-del-sol-hero.png"); /* ✅ PNG */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 70vh;            /* 🔥 CLAVE */
+  padding: 6rem 2rem;
+
+  display: flex;               /* 🔥 CLAVE */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Capa oscura elegante */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 45, 38, 0.55);
+}
+
+/* Texto por encima del overlay */
+.hero h2,
+.hero p {
+  position: relative;
+  z-index: 1;
 }
 
 footer {
