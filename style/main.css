@@ -33,7 +33,7 @@ header {
   background-repeat: no-repeat;
 
   min-height: 100vh;
-  padding: 6rem 2rem;
+  padding: 0 2rem; /* ✅ más premium: sin exceso de padding vertical */
 
   display: flex;
   flex-direction: column;
@@ -58,6 +58,25 @@ header {
 .hero p {
   position: relative;
   z-index: 1;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Título hero premium */
+.hero h2 {
+  font-size: 3rem;
+  letter-spacing: 0.5px;
+  margin: 0 0 1rem 0;
+}
+
+/* Texto hero premium */
+.hero p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.95;
 }
 
 /* =========================
@@ -68,6 +87,68 @@ footer {
   padding: 2rem;
   background-color: #002d26;
   color: white;
+}
+
+/* =========================
+   Google Translate Button
+========================= */
+.translate-box {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 6px 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(6px);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Ajustes del widget */
+.goog-te-gadget {
+  color: #333 !important;
+}
+
+.goog-te-gadget select {
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Ocultar la barra superior de Google Translate */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+/* =========================
+   ANIMACIÓN PREMIUM
+========================= */
+.hero h2,
+.hero p {
+  animation: fadeUp 0.9s ease-out both;
+}
+
+.hero p {
+  animation-delay: 0.12s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =========================
@@ -88,15 +169,22 @@ footer {
   }
 
   .hero {
-    padding: 4rem 1.5rem;
+    padding: 0 1.2rem;
+    min-height: 85vh;
   }
 
   .hero h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .hero p {
     font-size: 1rem;
-    max-width: 90%;
+    max-width: 92%;
+  }
+
+  .translate-box {
+    top: 10px;
+    right: 10px;
+    padding: 5px 8px;
   }
 }

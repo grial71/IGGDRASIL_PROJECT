@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
+  
+  <!-- Google Translate (ES / FR / EN) -->
+<div id="google_translate_element" class="translate-box"></div>
+
   <header>
     <img src="img/logo-iggdrasil.jpeg" alt="Logo IGGDRASIL" class="logo">
     <h1>IGGDRASIL – Residencia Privada Costa del Sol</h1>
@@ -22,5 +26,21 @@
   <footer>
     <p>Contacto WhatsApp: <a href="https://wa.me/34622181908">+34 622 18 19 08</a> – Juan Miguel Yuste</p>
   </footer>
+
+  <script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'es',
+        includedLanguages: 'es,fr,en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      },
+      'google_translate_element'
+    );
+  }
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
